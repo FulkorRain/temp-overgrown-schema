@@ -7,17 +7,17 @@ props:
     origins:
         href: https://0vergrown.github.io/Handbook/docs/datapack/origins/layers/
         desc: The origins offered in this layer.
-        type: list
-        vals:
-            or:
-              - title: simple
-                type: list
-                vals:
-                    link: identifier
-              - title: conditioned
-                type: list
-                vals:
-                    type: object
+        or:
+          - title: simple
+            type: list
+            vals:
+                link: identifier
+          - title: conditioned
+            type: list
+            vals:
+                or:
+                  - link: identifier
+                  - type: object
                     props:
                         condition:
                             desc: The condition that the player needs to fulfill to get access to the origins specified here. Client-side checks only!
