@@ -1,0 +1,24 @@
+$: 202
+15:
+  - meta
+  - powers
+  - global_powers
+  - origins
+  - origin_layers
+  - advancements
+  - damage_type
+  - predicates
+  - recipes
+  - loot_tables
+  - item_modifiers
+  - skill_trees
+  - tags
+  - keybinds
+  - enums
+  - enum_blocks
+  - enum_sound_event
+  - enum_textures
+  - effects
+  - badges
+48:
+  - meta
