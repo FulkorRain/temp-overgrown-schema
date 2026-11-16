@@ -9457,7 +9457,7 @@ links:
         desc: an Array of Identifiers that refers to an entity type or an entity type tag (if prefixed with the tag symbol), similar to how entries in a tag are defined.
         link: identifier_array
     equipment_slot:
-        enum: ['main_hand','off_hand','head','chest','legs','feet']
+        enum: ['mainhand','offhand','head','chest','legs','feet']
         unspec: true
     expression_float:
         href: https://0vergrown.github.io/Handbook/docs/datapack/data-types/expression
@@ -9672,8 +9672,23 @@ links:
     ingredient:
         unspec: true
         or:
-          - title: single
-            link: ingredient_select
+          - title: simple
+            link: identifier
+          - title: item
+            type: object
+            props:
+                item:
+                    desc: ID of a registered item.
+                    link: identifier
+          - title: tag
+            type: object
+            props:
+                tag:
+                    desc: ID of an item tag.
+                    helper:
+                        title: Item Tag
+                        folder: tags/items
+                    link: identifier
           - title: multiple
             type: list
             vals:
@@ -9682,23 +9697,21 @@ links:
         or:
           - title: simple
             link: identifier
-          - title: advanced
-            or:
-              - title: item
-                type: object
-                props:
-                    item:
-                        desc: ID of a registered item.
-                        link: identifier
-              - title: tag
-                type: object
-                props:
-                    tag:
-                        desc: ID of an item tag.
-                        helper:
-                            title: Item Tag
-                            folder: tags/items
-                        link: identifier
+          - title: item
+            type: object
+            props:
+                item:
+                    desc: ID of a registered item.
+                    link: identifier
+          - title: tag
+            type: object
+            props:
+                tag:
+                    desc: ID of an item tag.
+                    helper:
+                        title: Item Tag
+                        folder: tags/items
+                    link: identifier
     integer_amp:
         desc: The minimum and maximum amplifier of the status effect.
         type: integer
